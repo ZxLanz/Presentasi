@@ -1,0 +1,29 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bc13fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Briefcase Body -->
+  <rect x="20" y="35" width="60" height="45" rx="5" fill="none" stroke="url(#neonGrad)" stroke-width="3" filter="url(#glow)" />
+  
+  <!-- Handle -->
+  <path d="M40 35 V 25 A 10 10 0 0 1 60 25 V 35" fill="none" stroke="url(#neonGrad)" stroke-width="3" filter="url(#glow)" />
+  
+  <!-- Circuit Details -->
+  <circle cx="30" cy="50" r="2" fill="#00f3ff" filter="url(#glow)" />
+  <circle cx="70" cy="50" r="2" fill="#bc13fe" filter="url(#glow)" />
+  <path d="M30 50 L 45 50 L 50 60 L 70 60" fill="none" stroke="#00f3ff" stroke-width="1.5" opacity="0.7" />
+  
+  <!-- Chip -->
+  <rect x="45" y="45" width="10" height="8" fill="none" stroke="#bc13fe" stroke-width="1" />
+</svg>
