@@ -1,0 +1,31 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bc13fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Question Mark -->
+  <path d="M35 35 A 15 15 0 0 1 65 35 C 65 45 50 45 50 55 V 60" fill="none" stroke="url(#neonGrad)" stroke-width="5" stroke-linecap="round" filter="url(#glow)" />
+  
+  <!-- Dot -->
+  <circle cx="50" cy="75" r="4" fill="#00f3ff" filter="url(#glow)" />
+
+  <!-- Circuit nodes -->
+  <circle cx="20" cy="20" r="2" fill="#bc13fe" opacity="0.8" />
+  <circle cx="80" cy="20" r="2" fill="#bc13fe" opacity="0.8" />
+  <circle cx="20" cy="80" r="2" fill="#bc13fe" opacity="0.8" />
+  <circle cx="80" cy="80" r="2" fill="#bc13fe" opacity="0.8" />
+  
+  <!-- Lines -->
+  <line x1="20" y1="20" x2="30" y2="30" stroke="#bc13fe" stroke-width="1" opacity="0.5" />
+  <line x1="80" y1="20" x2="70" y2="30" stroke="#bc13fe" stroke-width="1" opacity="0.5" />
+</svg>
